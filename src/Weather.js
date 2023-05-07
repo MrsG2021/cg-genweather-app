@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+
 import axios from "axios";
 import "./Weather.css";
 
@@ -12,9 +13,7 @@ export default function Weather(props) {
       ready: true,
       temperature: response.data.main.temp,
       date: new Date(response.data.dt * 1000),
-      iconUrl:
-        "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png",
-
+      icon: response.data.weather[0].icon,
       city: response.data.name,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -24,13 +23,13 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "134f72af9a01feb9tf90bc69e89fo0b2";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
   function handleSubmit(event) {
-    event.precentDefault();
+    event.preventDefault();
     search();
   }
 
