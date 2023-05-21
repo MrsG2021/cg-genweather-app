@@ -17,10 +17,10 @@ export default function WeatherForecast(props) {
   }
 
   function load() {
-    let apiKey = "927cbb061ad81f32a640cb7d1573db66";
+    let apiKey = "6643c7326a4c2a38838264a28531d97e";
     let longitude = props.coordinates.lon;
     let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast/daily?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
 
     axios.get(apiUrl).then(handleResponse);
   }
