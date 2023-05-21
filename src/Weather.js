@@ -9,10 +9,12 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
       coordinates: response.data.coord,
       temperature: response.data.main.temp,
+
       date: new Date(response.data.dt * 1000),
       icon: response.data.weather[0].icon,
       city: response.data.name,
@@ -55,7 +57,7 @@ export default function Weather(props) {
               <input
                 type="submit"
                 value="Search"
-                className="btn btn-primary w-100"
+                className="btn btn-outline-dark w-100"
               />
             </div>
           </div>

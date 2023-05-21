@@ -1,10 +1,27 @@
 .Weather {
-  border: 1px solid #dadde1;
-  font-family: arial, sans-serif;
-  color: rgb(135, 135, 135);
-  padding: 16px;
+  font-family: "Space Grotesk", sans-serif;
+  color: black;
+  border: #5b0909;
+  opacity: 0.8;
+  background-color: #f9e090;
+  border-radius: 50px;
 
-  border-radius: 4px;
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  display: block;
+  position: relative;
+}
+.form-control {
+  border-color: black;
+  border-radius: 50px;
+}
+
+.btn {
+  color: black;
+
+  border-color: black;
+  border-radius: 50px;
 }
 
 .Weather h1 {
@@ -28,14 +45,14 @@
 
 .Weather canvas {
   display: inline-block;
-  margin-top: 10px;
+
   margin-bottom: 10px;
   vertical-align: top;
 }
 
 .Weather .temperature {
   font-weight: bold;
-  color: rgb(33, 33, 33);
+  color: black;
   font-size: 64px;
   line-height: 64px;
   font-weight: 400;

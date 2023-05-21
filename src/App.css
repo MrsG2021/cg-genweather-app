@@ -1,9 +1,18 @@
 .App {
-  max-width: 600px;
-  margin: 30px auto;
+  font-family: "Space Grotesk", sans-serif;
+  max-block-size: none;
+  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/053/356/original/cropped.jpg?1668340468");
+  background-size: 130%;
+  padding-top: 150px;
+  padding-bottom: 500px;
+  color: #5b0909;
 }
 
 .App footer {
-  font-size: 11px;
   margin: 10px 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: italic;
+  display: block;
+  text-align: center;
+  font-size: x-small;
 }
